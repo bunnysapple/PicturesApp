@@ -1,0 +1,15 @@
+.imageBox {
+  width: 30svw;
+  height: 30svw;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1rem;
+}
+
+.image {
+  max-width: 90%;
+  max-height: 90%;
+}
