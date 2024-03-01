@@ -6,9 +6,7 @@ export default function ImageContainer({ images }) {
   return (
     <div className={styles.body}>
       {images.length !== 0
-        ? images.map((image) => (
-            <ImageBox key={image.id} image={image.urls.small} />
-          ))
+        ? images.map((image) => <ImageBox key={image.id} image={image} />)
         : ""}
     </div>
   );

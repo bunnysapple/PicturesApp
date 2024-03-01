@@ -1,10 +1,16 @@
 .imageBox {
-  width: fit-content;
-  height: fit-content;
+  width: intrinsic;
+  height: intrinsic;
+  width: max-content;
+  height: max-content;
+  width: -moz-max-content;
+  height: -moz-max-content;
+  width: -webkit-max-content;
+  height: -webkit-max-content;
   border-radius: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.1rem;
+  margin: 10px;
 }

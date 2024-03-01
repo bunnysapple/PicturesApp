@@ -5,7 +5,6 @@ import Body from "./components/Body";
 import axios from "axios";
 
 function App() {
-  const [value, setValue] = useState("random");
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
   const [pages, setPages] = useState(1);

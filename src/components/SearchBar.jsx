@@ -19,7 +19,7 @@ export default function SearchBar({ setSearch }) {
           onChange={(e) => setValue(e.target.value)}
         />
         <button className={styles.searchButton} onClick={clickEvent}>
-          Go
+          🔍
         </button>
       </form>
     </div>
