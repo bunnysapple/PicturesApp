@@ -10,8 +10,8 @@ const app = express();
 
 app.use(cors());
 
-app.get(`/:dynamic`, (req, res) => {
-  const LINK = "https://api.unsplash.com/search/photos?";
+app.get(`/search/:dynamic`, (req, res) => {
+  const LINK = "https://api.unsplash.com/search/photos/?";
   const { dynamic } = req.params;
   const PER_PAGE = "&per_page=30";
   const CLIENT_ID = "&client_id=" + process.env.REACT_ACCESS_KEY;
@@ -20,6 +20,8 @@ app.get(`/:dynamic`, (req, res) => {
     method: "GET",
     url: LINK + dynamic + PER_PAGE + CLIENT_ID,
   };
+
+  console.log(options.url);
 
   axios
     .request(options)
@@ -31,8 +33,26 @@ app.get(`/:dynamic`, (req, res) => {
     });
 });
 
-app.get("/", (req, res) => {
-  res.json("hi");
+app.get("/random/", (req, res) => {
+  const LINK = "https://api.unsplash.com/photos/random/?";
+  const COUNT = "count=30";
+  const CLIENT_ID = "&client_id=" + process.env.REACT_ACCESS_KEY;
+
+  const options = {
+    method: "GET",
+    url: LINK + COUNT + CLIENT_ID,
+  };
+
+  console.log(options.url);
+
+  axios
+    .request(options)
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));

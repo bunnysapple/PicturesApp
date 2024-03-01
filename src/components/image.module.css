@@ -1,0 +1,11 @@
+.box {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.image {
+  max-width: 30svw;
+  max-height: 30svh;
+}

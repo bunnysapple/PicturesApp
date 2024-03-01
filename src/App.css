@@ -3,12 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  overflow: hidden;
-}
-
-#root {
-  height: 100svh;
-  overflow-y: scroll;
-}

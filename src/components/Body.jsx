@@ -1,14 +1,25 @@
-import { useEffect, useState } from "react";
-import ImageBox from "./ImageBox";
-import styles from "./body.module.css";
-import axios from "axios";
+import ImageContainer from "./ImageContainer";
+import MoreButton from "./MoreButton";
 
-export default function Body({ images }) {
+export default function Body({
+  pages,
+  images,
+  pageNum,
+  search,
+  setPageNum,
+  setData,
+}) {
   return (
-    <div className={styles.body}>
-      {images.map((image) => (
-        <ImageBox key={image.id} image={image.urls.small} />
-      ))}
+    <div>
+      <ImageContainer images={images} />
+      <MoreButton
+        pages={pages}
+        pageNum={pageNum}
+        search={search}
+        images={images}
+        setPageNum={setPageNum}
+        setData={setData}
+      />
     </div>
   );
 }
