@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
 import Body from "./components/Body";
 import axios from "axios";
 
 function App() {
+  const [value, setValue] = useState();
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
   const [pages, setPages] = useState(1);
@@ -27,8 +28,12 @@ function App() {
       .catch((error) => console.log(error));
   }
 
-  useEffect(() => {
+  useMemo(() => {
+    if (value === search) {
+      return;
+    }
     console.log(search);
+    setValue(search);
     setPageNum(1);
     getImages();
   }, [search]);
