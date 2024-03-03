@@ -1,9 +1,11 @@
 import styles from "./image.module.css";
 
-export default function Image({ image }) {
+export default function Image({ clicked, image }) {
+  const size = clicked ? styles.clickedImage : styles.normalImage;
+
   return (
     <div className={styles.box}>
-      <img className={styles.image} src={image} />
+      <img className={`${styles.image} ${size}`} src={image} />
     </div>
   );
 }

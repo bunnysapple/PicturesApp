@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./morebutton.module.css";
 import axios from "axios";
+import Search2 from "../../test/SearchPage2.json";
 
 export default function MoreButton({
   pages,
@@ -25,7 +26,8 @@ export default function MoreButton({
 
   function clickEvent() {
     console.log("hi");
-    getImages();
+    // getImages();
+    setData(images.concat(Search2.results));
     setPageNum(pageNum + 1);
   }
 

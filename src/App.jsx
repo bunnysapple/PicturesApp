@@ -3,9 +3,10 @@ import SearchBar from "./components/SearchBar";
 import "./App.css";
 import Body from "./components/Body";
 import axios from "axios";
+import Search1 from "../test/SearchPage1.json";
+import Random from "../test/Random.json";
 
 function App() {
-  const [value, setValue] = useState();
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
   const [pages, setPages] = useState(1);
@@ -29,13 +30,14 @@ function App() {
   }
 
   useMemo(() => {
-    if (value === search) {
-      return;
-    }
     console.log(search);
-    setValue(search);
     setPageNum(1);
-    getImages();
+    location.hostname !== "localhost"
+      ? getImages()
+      : search === ""
+      ? setData(Random)
+      : (setData(Search1.results), setPages(Search1.total_pages));
+    console.log(pages);
   }, [search]);
 
   return (
