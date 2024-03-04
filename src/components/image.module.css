@@ -3,6 +3,8 @@
   height: fit-content;
   border-radius: 5px;
   margin: 5px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .image {
@@ -17,8 +19,8 @@
 }
 
 .clickedImage {
-  max-width: 90svw;
-  max-height: 90svh;
-  min-height: 45svw;
-  min-width: 45svh;
+  max-width: 80svw;
+  max-height: 80svh;
+  min-height: 30svh;
+  min-width: 30svw;
 }

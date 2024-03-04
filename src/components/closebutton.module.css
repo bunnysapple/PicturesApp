@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.button {
+  z-index: 2;
+  padding: 2px;
+  height: 5svh;
+  width: 5svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 2svh;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.buttonClicked {
+  background-color: red;
+}
