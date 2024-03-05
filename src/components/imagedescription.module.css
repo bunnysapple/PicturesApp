@@ -1,0 +1,12 @@
+.textBox {
+  width: 90%;
+  padding: 1svh;
+  text-align: left;
+}
+
+.text {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

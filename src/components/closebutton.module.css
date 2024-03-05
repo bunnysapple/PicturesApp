@@ -3,11 +3,9 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  z-index: 1;
 }
 
 .button {
-  z-index: 2;
   padding: 2px;
   height: 5svh;
   width: 5svh;
@@ -21,8 +19,4 @@
 
 .button:hover {
   cursor: pointer;
-}
-
-.buttonClicked {
-  background-color: red;
 }
