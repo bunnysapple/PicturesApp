@@ -5,32 +5,49 @@
   text-align: left;
   font-size: 1.1em;
   font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5svh;
 }
 
 .info {
-  width: 80%;
+  width: 75%;
   display: inline-block;
+  text-align: center;
 }
 
-.text {
-  width: 90%;
-  text-align: center;
+/* .text {
   display: flex;
   text-align: left;
   justify-content: space-between;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.text p {
-  width: 70%;
-}
-
-.container * {
-  margin: 0.5svh;
-}
+  text-align: center;
+} */
 
 .linksContainer {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
+  width: 20%;
+  margin-left: 1.5svw;
+}
+
+.unsplashLink {
+  color: black;
+  text-decoration: none;
+}
+
+.unsplashLink:hover:not(:has(.moreOrLess:hover)) {
+  text-decoration: underline;
+}
+
+.moreOrLess {
+  border: none;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(120, 250, 50, 1);
+}
+
+.moreOrLess:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(120, 250, 50, 1);
 }
