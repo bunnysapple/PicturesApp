@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (res) => {
-  res.json(`Server is running on ${process.env.PORT}`);
+  console.log(`Server is running on ${process.env.PORT}`);
 });
 
 app.get(`/search/:dynamic`, (req, res) => {
