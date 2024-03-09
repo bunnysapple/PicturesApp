@@ -49,16 +49,14 @@ app.get("/random/", (req, res) => {
 
   console.log(options.url);
 
-  res.json(process.env.PORT);
-
-  // axios
-  //   .request(options)
-  //   .then((response) => {
-  //     res.json(response.data);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
+  axios
+    .request(options)
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
