@@ -10,8 +10,8 @@ const app = express();
 
 app.use(cors());
 
-app.get("/", (res) => {
-  console.log(`Server is running on ${process.env.PORT}`);
+app.get("/", (req, res) => {
+  res.json(`Server is running on ${process.env.PORT}`);
 });
 
 app.get(`/search/:dynamic`, (req, res) => {
