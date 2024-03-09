@@ -46,6 +46,12 @@ export default function Info({ image }) {
             Less
           </button>
         )}
+        <p>
+          By{" "}
+          <a target="_blank" href={image.user.links.html}>
+            {image.user.name}
+          </a>
+        </p>
       </div>
       <div className={styles.linksContainer}>
         <a

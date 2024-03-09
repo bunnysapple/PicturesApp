@@ -37,6 +37,7 @@ function App() {
       : search === ""
       ? setData(Random)
       : (setData(Search1.results), setPages(Search1.total_pages));
+    // getImages();
     console.log(pages);
   }, [search]);
 

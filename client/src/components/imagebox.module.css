@@ -1,6 +1,5 @@
 .imageBox {
   border-radius: 10px;
-  box-shadow: 0 0 2px rgba(120, 250, 50, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +7,14 @@
   margin: 5px;
   padding: 5px;
   text-decoration: none;
+}
+
+.outline {
+  box-shadow: 0 0 2px rgba(120, 250, 50, 1);
+}
+
+.clickedOutline {
+  box-shadow: 0 0 2px rgba(120, 250, 50, 1);
 }
 
 .normalBox {
@@ -28,7 +35,7 @@
   height: -webkit-max-content;
 }
 
-.normalBox:hover {
+.outline:hover {
   cursor: pointer;
   box-shadow: 0 0 10px rgb(120, 250, 50);
 }
