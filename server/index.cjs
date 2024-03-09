@@ -10,6 +10,10 @@ const app = express();
 
 app.use(cors());
 
+app.get("/", (res) => {
+  res.json(`Server is running on ${process.env.PORT}`);
+});
+
 app.get(`/search/:dynamic`, (req, res) => {
   const LINK = "https://api.unsplash.com/search/photos/?";
   const { dynamic } = req.params;
