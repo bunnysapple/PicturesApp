@@ -34,7 +34,9 @@ export default function MoreButton({
   return (
     <div className={styles.container}>
       {pageNum < pages && search !== "" ? (
-        <button onClick={clickEvent}>More</button>
+        <button className={styles.button} onClick={clickEvent}>
+          More
+        </button>
       ) : (
         ""
       )}

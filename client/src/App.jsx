@@ -30,6 +30,7 @@ function App() {
   }
 
   useMemo(() => {
+    scrollTo(0, 0);
     console.log(search);
     setPageNum(1);
     location.hostname !== "localhost"

@@ -4,3 +4,17 @@
   padding: 0.5em;
   align-items: center;
 }
+
+.button {
+  background-color: rgb(119, 177, 11);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 5px rgba(120, 250, 50, 1); */
+}
+
+.button:hover {
+  box-shadow: 0 0 5px rgba(120, 250, 50, 1);
+  cursor: pointer;
+}
