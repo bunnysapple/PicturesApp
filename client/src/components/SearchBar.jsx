@@ -9,6 +9,7 @@ export default function SearchBar({ setSearch }) {
   function clickEvent(e) {
     e.preventDefault();
     setSearch(value);
+    document.activeElement.blur();
   }
 
   return (

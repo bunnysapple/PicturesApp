@@ -56,7 +56,7 @@ export default function Info({ image }) {
         </p>
       </div>
       <div className={styles.linksContainer}>
-        <a href={image.urls.raw} className={styles.fullLink}>
+        <a target="_blank" href={image.urls.raw} className={styles.fullLink}>
           Open Image{" "}
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
