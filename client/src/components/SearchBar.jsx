@@ -13,9 +13,18 @@ export default function SearchBar({ setSearch }) {
 
   return (
     <div className={styles.div}>
-      <img className={styles.logo} src="/bunnysappleLogo.png" alt="logo" />
+      <img
+        onClick={() => {
+          setSearch("");
+          setValue("");
+        }}
+        className={styles.logo}
+        src="/bunnysappleLogo.png"
+        alt="logo"
+      />
       <form className={styles.form}>
         <input
+          value={value}
           className={styles.searchBox}
           type="text"
           onChange={(e) => setValue(e.target.value)}

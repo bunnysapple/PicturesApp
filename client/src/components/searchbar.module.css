@@ -54,3 +54,7 @@
   max-width: 10%;
   max-height: 100%;
 }
+
+.logo:hover {
+  cursor: pointer;
+}
