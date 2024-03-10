@@ -6,12 +6,18 @@ export default function Body({
   images,
   pageNum,
   search,
+  oneClicked,
   setPageNum,
   setData,
+  setOneClicked,
 }) {
   return (
     <div>
-      <ImageContainer images={images} />
+      <ImageContainer
+        images={images}
+        oneClicked={oneClicked}
+        setOneClicked={setOneClicked}
+      />
       <MoreButton
         pages={pages}
         pageNum={pageNum}

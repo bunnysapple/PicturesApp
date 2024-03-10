@@ -1,9 +1,7 @@
-import { useState } from "react";
 import ImageBox from "./ImageBox";
 import styles from "./imagecontainer.module.css";
 
-export default function ImageContainer({ images }) {
-  const [oneClicked, setOneClicked] = useState(false);
+export default function ImageContainer({ images, oneClicked, setOneClicked }) {
   return (
     <div className={styles.body}>
       {images.length !== 0 ? (

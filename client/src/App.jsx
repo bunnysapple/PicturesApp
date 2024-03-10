@@ -9,6 +9,7 @@ function App() {
   const [data, setData] = useState([]);
   const [pages, setPages] = useState(1);
   const [pageNum, setPageNum] = useState(1);
+  const [oneClicked, setOneClicked] = useState(false);
 
   async function getImages() {
     const baseURL = "https://pictures-app-psi.vercel.app/";
@@ -29,6 +30,7 @@ function App() {
     scrollTo(0, 0);
     setPageNum(1);
     getImages();
+    setOneClicked(false);
   }, [search]);
 
   return (
@@ -39,8 +41,10 @@ function App() {
         images={data}
         pageNum={pageNum}
         search={search}
+        oneClicked={oneClicked}
         setPageNum={setPageNum}
         setData={setData}
+        setOneClicked={setOneClicked}
       />
     </div>
   );
