@@ -1,10 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
 import Body from "./components/Body";
 import axios from "axios";
-import Search1 from "../test/SearchPage1.json";
-import Random from "../test/Random.json";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -13,12 +11,10 @@ function App() {
   const [pageNum, setPageNum] = useState(1);
 
   async function getImages() {
-    const baseURL = "http://localhost:8000/";
+    const baseURL = "https://pictures-app-psi.vercel.app/";
     const dynamic = search === "" ? "random" : `search/query=${search}&page=1`;
 
     window.scrollTo(0, 0);
-
-    console.log(baseURL + dynamic);
 
     axios
       .get(baseURL + dynamic)
@@ -31,15 +27,8 @@ function App() {
 
   useMemo(() => {
     scrollTo(0, 0);
-    console.log(search);
     setPageNum(1);
-    location.hostname !== "localhost"
-      ? getImages()
-      : search === ""
-      ? setData(Random)
-      : (setData(Search1.results), setPages(Search1.total_pages));
-    // getImages();
-    console.log(pages);
+    getImages();
   }, [search]);
 
   return (

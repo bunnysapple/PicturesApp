@@ -4,7 +4,6 @@ import styles from "./imagecontainer.module.css";
 
 export default function ImageContainer({ images }) {
   const [oneClicked, setOneClicked] = useState(false);
-  console.log(images);
   return (
     <div className={styles.body}>
       {images.length !== 0 ? (
@@ -17,9 +16,21 @@ export default function ImageContainer({ images }) {
           />
         ))
       ) : (
-        <div>
+        <div className={styles.errorMessage}>
           <h2>Sorry, We Couldn't Find What You Are Looking For.</h2>
-          <h3>Check your spelling and try again?</h3>
+          <ul>
+            <li>
+              <h3>
+                Our servers might be down, but before jumping to conclusions...
+              </h3>
+            </li>
+            <li>
+              <h3>Check your network is working right.</h3>
+            </li>
+            <li>
+              <h3>Check your spelling.</h3>
+            </li>
+          </ul>
         </div>
       )}
     </div>

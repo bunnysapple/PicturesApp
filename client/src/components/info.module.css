@@ -45,9 +45,19 @@
   padding: 5px;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(120, 250, 50, 1);
+  background-color: transparent;
+  color: rgb(67, 99, 6);
 }
 
 .moreOrLess:hover {
   cursor: pointer;
   box-shadow: 0 0 5px rgba(120, 250, 50, 1);
+}
+
+.FontAwesomeIcon {
+  font-size: 0.8em;
+}
+
+.fullLink {
+  font-weight: 500;
 }

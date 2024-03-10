@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TextTruncate from "react-text-truncate";
 import styles from "./info.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Info({ image }) {
   const [truncate, setTruncate] = useState(1);
@@ -54,12 +56,12 @@ export default function Info({ image }) {
         </p>
       </div>
       <div className={styles.linksContainer}>
-        <a
-          href={image.urls.raw}
-          className={styles.fullLink}
-          // onClick={() => window.open(image.urls.raw)}
-        >
-          Open Image ↗
+        <a href={image.urls.raw} className={styles.fullLink}>
+          Open Image{" "}
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className={styles.FontAwesomeIcon}
+          />
         </a>
       </div>
     </div>

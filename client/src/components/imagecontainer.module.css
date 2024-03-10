@@ -5,3 +5,12 @@
   align-items: center;
   padding: 5px;
 }
+
+.errorMessage {
+  max-height: 80svh;
+  min-height: 70svh;
+}
+
+.errorMessage * {
+  margin: 5svh;
+}

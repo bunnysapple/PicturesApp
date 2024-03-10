@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json(`Server is running on ${process.env.PORT}`);
+  res.json(`Server is running.`);
 });
 
 app.get(`/search/:dynamic`, (req, res) => {
@@ -59,4 +59,4 @@ app.get("/random/", (req, res) => {
     });
 });
 
-app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
+app.listen(PORT, () => console.log(`Server is running.`));

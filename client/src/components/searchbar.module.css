@@ -3,13 +3,13 @@
   height: 10svh;
   min-height: 6svw;
   display: flex;
-  justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   left: 0;
   background-color: white;
+  padding: 5px;
 }
 
 .form {
@@ -17,8 +17,9 @@
   justify-content: space-around;
   width: 40%;
   border-radius: 5px;
-  /* box-shadow: -2px 2px 2px rgba(9, 193, 110, 0.7); */
   box-shadow: 0 0 2px rgb(9, 193, 110);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form:focus-within {
@@ -47,4 +48,9 @@
 
 .searchButton:hover {
   cursor: pointer;
+}
+
+.logo {
+  max-width: 10%;
+  max-height: 100%;
 }

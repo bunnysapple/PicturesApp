@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import styles from "./morebutton.module.css";
 import axios from "axios";
-import Search2 from "../../test/SearchPage2.json";
 
 export default function MoreButton({
   pages,
@@ -12,22 +10,19 @@ export default function MoreButton({
   setData,
 }) {
   async function getImages() {
-    const baseURL = "http://localhost:8000/";
+    const baseURL = "https://pictures-app-psi.vercel.app/";
     const dynamic = `search/query=${search}&page=${pageNum + 1}`;
 
     axios
       .get(baseURL + dynamic)
       .then((res) => {
         setData(images.concat(res.data.results));
-        console.log(images);
       })
       .catch((error) => console.log(error));
   }
 
   function clickEvent() {
-    console.log("hi");
-    // getImages();
-    setData(images.concat(Search2.results));
+    getImages();
     setPageNum(pageNum + 1);
   }
 

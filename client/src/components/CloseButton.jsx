@@ -1,4 +1,6 @@
 import styles from "./closebutton.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function CloseButton({ clicked, setOneClicked, setClicked }) {
   return (
@@ -10,7 +12,7 @@ export default function CloseButton({ clicked, setOneClicked, setClicked }) {
         }}
         className={styles.button}
       >
-        ✖
+        <FontAwesomeIcon icon={faX} />
       </button>
     </div>
   );
