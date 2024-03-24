@@ -1,8 +1,6 @@
-# React + Vite
+# PicturesApp
+A small image search engine that uses the free unsplash api to deliver images that correspond to searches.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built using <b>React + Vite<b>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I consider this a complete project, however, if you have any recommendations, feel free to reach out to me on athulsunil04@gmail.com
