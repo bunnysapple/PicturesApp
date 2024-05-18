@@ -15,8 +15,8 @@ app.use((req, res, next) => {
   };
 
   if (
-    reqOrigin === "https://pictures-app-client.vercel.app" ||
-    reqOrigin ===
+    originDomain === "https://pictures-app-client.vercel.app" ||
+    originDomain ===
       "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app"
   ) {
     corsOptions.origin = reqOrigin;
