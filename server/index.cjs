@@ -13,6 +13,7 @@ app.use(
     origin:
       "https://pictures-app-client.vercel.app" ||
       "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app",
+    Vary: "Origin",
   })
 );
 
