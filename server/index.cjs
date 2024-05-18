@@ -8,24 +8,7 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-app.use((req, res, next) => {
-  const originDomain = req.get("origin");
-  let corsOptions = {
-    origin: "https://pictures-app-client.vercel.app",
-  };
-
-  if (
-    originDomain === "https://pictures-app-client.vercel.app" ||
-    originDomain ===
-      "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app"
-  ) {
-    corsOptions.origin = originDomain;
-  }
-
-  cors(corsOptions);
-
-  next();
-});
+app.use(cors({ origin: "https://pictures-app-client.vercel.app" }));
 
 app.get("/", cors(), (req, res) => {
   res.json(`Server is running.`);
@@ -41,8 +24,6 @@ app.get(`/search/:dynamic`, (req, res) => {
     method: "GET",
     url: LINK + dynamic + PER_PAGE + CLIENT_ID,
   };
-
-  console.log(options.url);
 
   axios
     .request(options)
@@ -63,8 +44,6 @@ app.get("/random/", (req, res) => {
     method: "GET",
     url: LINK + COUNT + CLIENT_ID,
   };
-
-  console.log(options.url);
 
   axios
     .request(options)
