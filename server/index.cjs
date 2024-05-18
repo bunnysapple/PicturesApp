@@ -10,10 +10,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "https://pictures-app-client.vercel.app",
+    origin:
+      "https://pictures-app-client.vercel.app" ||
       "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app",
-    ],
   })
 );
 
