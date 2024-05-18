@@ -8,17 +8,21 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://pictures-app-client.vercel.app/",
-  })
-);
+const corsOptions = {
+  origin: "https://pictures-app-client.vercel.app/",
+};
 
-app.get("/", (req, res) => {
+// app.use(
+//   cors({
+//     origin: "https://pictures-app-client.vercel.app/",
+//   })
+// );
+
+app.get("/", cors(corsOptions), (req, res) => {
   res.json(`Server is running.`);
 });
 
-app.get(`/search/:dynamic`, (req, res) => {
+app.get(`/search/:dynamic`, cors(corsOptions), (req, res) => {
   const LINK = "https://api.unsplash.com/search/photos/?";
   const { dynamic } = req.params;
   const PER_PAGE = "&per_page=30";
@@ -41,7 +45,7 @@ app.get(`/search/:dynamic`, (req, res) => {
     });
 });
 
-app.get("/random/", (req, res) => {
+app.get("/random/", cors(corsOptions), (req, res) => {
   const LINK = "https://api.unsplash.com/photos/random/?";
   const COUNT = "count=30";
   const CLIENT_ID = "&client_id=" + process.env.REACT_ACCESS_KEY;
