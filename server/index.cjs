@@ -8,20 +8,24 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-const reqOrigin = req.get("origin");
-corsOptions = {
-  origin: "https://pictures-app-client.vercel.app",
-};
+app.use((req, res, next) => {
+  const originDomain = req.get("origin");
+  let corsOptions = {
+    origin: "https://pictures-app-client.vercel.app",
+  };
 
-if (
-  reqOrigin === "https://pictures-app-client.vercel.app" ||
-  reqOrigin ===
-    "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app"
-) {
-  corsOptions.origin = reqOrigin;
-}
+  if (
+    reqOrigin === "https://pictures-app-client.vercel.app" ||
+    reqOrigin ===
+      "https://pictures-app-client-athul-krishna-madathil-sunils-projects.vercel.app"
+  ) {
+    corsOptions.origin = reqOrigin;
+  }
 
-app.use(cors(corsOptions));
+  cors(corsOptions);
+
+  next();
+});
 
 app.get("/", cors(), (req, res) => {
   res.json(`Server is running.`);
