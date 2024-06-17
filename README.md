@@ -3,4 +3,4 @@ A small image search engine that uses the free unsplash api to deliver images th
 
 Built using <b>React + Vite<b>
 
-I consider this a complete project, however, if you have any recommendations, feel free to reach out to me on athulsunil04@gmail.com
+I consider this a complete project for now as I am satisfied with it and everything I learned through this project.
